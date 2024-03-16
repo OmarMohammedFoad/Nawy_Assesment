@@ -50,3 +50,17 @@ This endpoint creates a new apartment in the database.
    docker-compose up
    ```
 5. Access the frontend application by navigating to `http://localhost:3000` in your web browser.
+
+### Running the Client Side
+
+1. Navigate to the `client` directory.
+2. Run the following command to install dependencies:
+   ```
+   npm install
+   ```
+3. Start the client-side application by running:
+   ```
+   npm run dev
+   ```
+
+The API will be accessible at `http://localhost:9000`, and the client-side application will be accessible at `http://localhost:3000`.
