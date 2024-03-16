@@ -1,0 +1,23 @@
+version: '3'
+services:
+  mongo:
+              container_name: mongo
+              image: mongo
+              ports:
+                - '27018:27017'
+  app:
+    build: .
+    container_name: app
+    depends_on:
+      - mongo
+    ports:
+      - 9000:9000
+
+  nextjs_app:
+    build:
+      context: ../client
+    container_name: nextjs_app
+    ports:
+      - '3000:3000'
+    depends_on:
+      - app
